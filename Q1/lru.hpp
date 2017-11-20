@@ -1,8 +1,10 @@
 #pragma once
 #include <vector>
+
+#include "pageRepAlgo.hpp"
 namespace Comp3473Ass4
 {
-    class LRU
+    class LRU : public ::Comp3473Ass4::PageRepAlgo
     {
         public:
             LRU(int);
@@ -19,10 +21,7 @@ namespace Comp3473Ass4
             void reset();
             int run();
         private:
-            std::vector<int> pages;
-            std::vector<int> frames;
             std::vector<int> time;
-            int faults;
             int findLRU(std::vector<int>&);
     };
 }

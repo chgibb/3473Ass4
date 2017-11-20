@@ -5,7 +5,7 @@
 //adapted from https://www.thecrazyprogrammer.com/2016/11/lru-page-replacement-algorithm-c.html
 
 
-::Comp3473Ass4::LRU::LRU(int frameNum)
+::Comp3473Ass4::LRU::LRU(int frameNum) : ::Comp3473Ass4::PageRepAlgo::PageRepAlgo(frameNum)
 {
     this->reset();
     this->setFrameNumber(frameNum);

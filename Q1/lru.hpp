@@ -17,7 +17,7 @@ namespace Comp3473Ass4
                 }
             }
             void reset();
-            void run();
+            int run();
         private:
             std::vector<int> pages;
             std::vector<int> frames;

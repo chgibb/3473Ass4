@@ -4,11 +4,11 @@
 #include "pageRepAlgo.hpp"
 namespace Comp3473Ass4
 {
-    class LRU : public ::Comp3473Ass4::PageRepAlgo
+    class FIFO : public ::Comp3473Ass4::PageRepAlgo
     {
         public:
-            LRU(int);
-            ~LRU();
+            FIFO(int);
+            ~FIFO();
             void setFrameNumber(int);
             template <class T>
             void setReferenceString(T ref)
@@ -21,7 +21,6 @@ namespace Comp3473Ass4
             void reset();
             int run();
         private:
-            std::vector<int> time;
-            int findLRU(std::vector<int>&);
+            
     };
 }

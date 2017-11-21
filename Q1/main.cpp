@@ -2,6 +2,7 @@
 #include <vector>
 
 #include "lru.hpp"
+#include "fifo.hpp"
 int main(int argc,char*argv[])
 {
     ::Comp3473Ass4::LRU lru(5);

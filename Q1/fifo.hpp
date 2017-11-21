@@ -4,7 +4,7 @@
 #include "pageRepAlgo.hpp"
 namespace Comp3473Ass4
 {
-    class FIFO : public ::Comp3473Ass4::PageRepAlgo
+    class FIFO : public ::Comp3473Ass4::PageRepAlgo<FIFO>
     {
         public:
             FIFO(int);

@@ -4,7 +4,7 @@
 #include "pageRepAlgo.hpp"
 namespace Comp3473Ass4
 {
-    class LRU : public ::Comp3473Ass4::PageRepAlgo
+    class LRU : public ::Comp3473Ass4::PageRepAlgo<LRU>
     {
         public:
             LRU(int);

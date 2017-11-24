@@ -5,12 +5,36 @@
 #include "pageRepAlgo.hpp"
 namespace Comp3473Ass4
 {
+    /**
+     * @brief 
+     * 
+     * adapted from http://meansofmine.blogspot.ca/2011/04/c-program-to-implement-fifo-page.html
+     * 
+     */
     class FIFO : public ::Comp3473Ass4::PageRepAlgo<FIFO>
     {
         public:
             FIFO(int);
+
             ~FIFO();
+
+            /**
+             * @brief 
+             * 
+             * Sets frame number to use
+             * 
+             * @param  
+             */
             void setFrameNumber(int);
+
+            /**
+             * @brief 
+             * 
+             * Sets reference string
+             * 
+             * @tparam T 
+             * @param ref 
+             */
             template <class T>
             void setReferenceString(T ref)
             {
@@ -21,9 +45,22 @@ namespace Comp3473Ass4
                     this->pages[i] = ref[i];
                 }
             }
+
+            /**
+             * @brief 
+             * 
+             * Reset all state to allow for reuse
+             * 
+             */
             void reset();
-            int run();
-        private:
-            
+
+            /**
+             * @brief 
+             * 
+             * Run algorithm. Returns number of page faults found
+             * 
+             * @return int 
+             */
+            int run();       
     };
 }
